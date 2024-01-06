@@ -31,14 +31,7 @@ Make sure you have the following installed before running the application:
    yarn
    ```
 
-4. Create a `.env` file in the root directory and configure it with your MongoDB connection string:
-
-   ```env
-   MONGO_URL = 'mongodb://localhost:27017/file-share-app'
-   APP_BASE_URL = 'http://localhost:3000'
-   ```
-
-5. Start the application:
+4. Start the application:
 
    ```bash
    yarn dev
