@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>File Upload Success</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>File Upload Successful</h1>
+    <% if (uploadedFile) { %>
+      <h2>Uploaded File Information:</h2>
+      <p>Filename: <%= uploadedFile.filename %></p>
+      <p>Size: <%= uploadedFile.size %> bytes</p>
+      <p>File Link: <a href="<%= `${process.env.APP_BASE_URL}/files/${uploadedFile.uuid}` %>">Download</a></p>
+      <% } %>
+      <div class="sub-container">
+        <h4>Share url to download: </h4>
+        <div class="inner">
+          <span><%= `${process.env.APP_BASE_URL}/files/${uploadedFile.uuid}` %></span>
+        </div>
+      </div>
+  </div>
+</body>
+</html>
